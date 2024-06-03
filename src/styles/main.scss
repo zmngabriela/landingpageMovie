@@ -1,0 +1,103 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'trailer';
+@use 'footer';
+
+@font-face {
+    font-family: 'beetwo';
+    src: url(../../assets/FontsFree-Net-bee-two.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: variables.$principal;
+    font-family: beetwo, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+// scale font-size based on screen width
+
+@function calcFontSize($base-size, $scale) {
+    @return $base-size * $scale;
+}
+
+@mixin textStyle($color, $base-size, $scale-small, $scale-medium, $scale-big) {
+    color: $color;
+    font-size: calcFontSize($base-size, $scale-small);
+
+    @media (min-width: 768px) {
+        font-size: calcFontSize($base-size, $scale-medium);
+    }
+
+    @media (min-width: 1024px) {
+        font-size: calcFontSize($base-size, $scale-big);
+    }
+}
+
+@mixin title($color: variables.$secondary) {
+    @include textStyle($color, 4em, 1, 1.2, 1.5);
+}
+
+@mixin text($color: variables.$detail) {
+    @include textStyle($color, 1.5em, 1, 1.2, 1.3);
+}
+
+// adjust font-size for bigger/smaller
+
+@mixin adjustFontSize($small, $medium, $big) {
+    font-size: $small;
+    
+    @media (min-width: 768px) {
+        font-size: $medium;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: $big;
+    }
+}
+
+.title--yellow {
+    @include title;
+}
+
+.title--red {
+    @include title(variables.$detail);
+}
+
+.text--black {
+    @include text(variables.$principal);
+}
+
+.text--red {
+    @include text;
+}
+
+.text--yellow {
+    @include text(variables.$secondary);
+}
+
+.title--small {
+    @include adjustFontSize(.6em, .6em, .6em);
+    letter-spacing: 1px;
+}
+
+.text--small {
+    @include adjustFontSize(1.5em, 1.8em, 2.3em);
+    letter-spacing: 1px;
+}
+
+.text--smaller {
+    @include adjustFontSize(.6em, .6em, .6em);
+    letter-spacing: 1px;
+}
+
+.header--hidden {
+    visibility: hidden;
+}

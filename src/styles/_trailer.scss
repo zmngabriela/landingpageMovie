@@ -1,0 +1,21 @@
+@use 'variables';
+
+.trailer { 
+    &__container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10 6vw;
+
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        &__video {
+            width: 80vw;
+            height: 50%;
+        }
+    }
+}

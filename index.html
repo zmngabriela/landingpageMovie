@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kill Bill</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__container">
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="#trailer" class="button" id="trailerButton">
+                        Trailer
+                    </a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#footer"  class="button">
+                        Credits
+                    </a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="button">
+                        More
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__head">
+                <div class="hero__head__info">
+                    <img src="./dist/images/miramax.png" alt="Miramax">
+                    <img src="./dist/images/production-I.G.png" alt="Production I.G">
+                    <ul class="text--black">
+                        <li>18+</li>
+                        <li>2003</li>
+                    </ul>
+                </div>
+                <h1 class="title--yellow">Kill Bill</h1>
+                <h2 class="title--yellow"><span class="title--small">Volume 1</span></h2>
+            </div>
+            <div class="hero__release">
+                <h2 class="title--yellow">October 10<span class="title--small">th</span></h2>
+                <p class="text--yellow text--small">Only in Theaters</p>
+            </div>
+            <div class="hero__sinopsis">
+                <p class="hero__sinopsis__button text--yellow">Sinopsis</p>
+                <p class="hero__sinopsis__collapse text--yellow">
+                    After awakening farom a four-yer coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="trailer" id="trailer">
+        <div class="trailer__container">
+            <h2 class="title--yellow">Watch the trailer</h2>
+            <iframe class="trailer__container__video" id="video"
+                src="https://www.youtube.com/embed/kEy0iKsx50s?controls=0&modestbranding=1&rel=0"
+                frameborder="0" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <img src="./dist/images/kill-bill.jpg" alt="Kill Bill">
+            <div class="footer__credits">
+                <h2 class="title--red">A roaring rampage of revenge</h2>
+                <p class="text--red text--small">
+                    Miramax Films <span class="text--smaller">presents</span> a band apart <span class="text--smaller">a film by</span> Quentin Tarantino  Uma Thurman  "Kill Bill" Lucy Liu<br> 
+                    Vivica A. Fox  Michael Madsen  Daryl Hanna <span class="text--smaller">and</span> David Carradine <span class="text--smaller">as</span> "Bill" <span class="text--smaller">presents</span> Sonny Chiba<br>
+                    Jullie Dreyfus  Chiaki Kuriyama  Gordon Lio  Michael Parks <span class="text--smaller">cloth design</span> Yue Woo Ping <span class="text--smaller">music design</span> The RZA<br>
+                    Sally Menke <span class="text--smaller">production by</span> Robert Richardson, A.s.C <span class="text--smaller">second producer</span> Yohei Taneda David Wasco<br>
+                    Bob Weinstein  Harvey Weinstein  Erica Steinberg  E. Bennett Walsh<br>
+                </p>
+            </div>
+            <div class="button-up">
+                <a href="#">
+                    <img class="up" src="./dist/images/up.png" alt="Go back to the top">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./src/scripts/main.js"></script>
+</body>
+</html>

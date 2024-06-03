@@ -1,0 +1,51 @@
+@use 'variables';
+
+.footer {
+    height: 100vh;
+    background-color: variables.$secondary;
+
+    &__container {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    &__credits {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: variables.$secondary;
+
+        p {
+            text-align: center;
+            color: variables.$detail;
+            line-height: .8;
+        }
+    }
+
+    .up {
+        width: 20px;
+        position: absolute;
+        right: 50px;
+        bottom: 100px;
+        transition: transform 0.3s ease;
+        transform-origin: center;
+        transform-box: fill-box;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
